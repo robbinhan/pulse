@@ -79,7 +79,7 @@ Linux 上同一份界面可以用 `nsh run --target linux`（GTK 4.14+ 和 WebKi
 | 整份配置 | `~/Library/Application Support/Pulse/profile.json` |
 | 网站数据 | `~/Library/WebKit/dev.pulse.app`、`~/Library/Caches/dev.pulse.app`、`~/Library/HTTPStorages/dev.pulse.app` |
 
-本地存储的键是 `theysay.profile.v1`（配置）和 `theysay.session.v1`（登录状态）。同一份 `storage.json` 里如果已有 `pulse.profile.v1` / `pulse.session.v1`，打开时也会读。Cookie 留在这个 bundle id 的网页存储里，不写进配置 JSON。日志前缀是 `[pulse]`。
+Pulse 把配置和登录状态写在 NSH Storage 的 `~/Library/Application Support/dev.pulse.app/storage.json` 里。同一份文件里如果已有 `pulse.profile.v1` / `pulse.session.v1`，打开时也会读。Cookie 留在这个 bundle id 的网页存储里，不写进配置 JSON。日志前缀是 `[pulse]`。
 
 设置里的整份配置可以复制到剪贴板，或从文本框粘贴回来。存成文件时用 `pulse-profile.json`。iPhone 上同一份数据在本应用容器里。
 
