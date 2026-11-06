@@ -1,0 +1,15 @@
+[package]
+name = "theysay"
+version = "0.1.0"
+edition = "2024"
+publish = false
+description = "Pulse (脉搏), a native reader for X, Threads, Instagram, and Weibo, built with NSH"
+
+[workspace]
+
+[dependencies]
+nsh-core = "0.3.0"
+nsh-base = "0.3.0"
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+ureq = { version = "3.5.0", default-features = false, features = ["rustls"] }

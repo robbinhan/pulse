@@ -1,0 +1,11 @@
+{
+  "name": "Pulse",
+  "id": "dev.pulse.app",
+  "version": "0.1.0",
+  "build": 1,
+  "icon": "assets/icon.png",
+  "rust": ".",
+  "theme": "theme.json",
+  "appearance": "system",
+  "statusBar": { "foreground": "auto" }
+}
