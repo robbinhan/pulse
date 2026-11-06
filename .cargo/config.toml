@@ -1,0 +1,8 @@
+# Xcode 26's iPhoneOS SDK compiles C dependencies (rquickjs, zstd inside
+# the NSH runner) for the SDK version when this is unset, then links them
+# at rustc's default of 10.0. That leaves ___chkstk_darwin undefined.
+# NSH 0.3.0 has no deployment-target key in nsh.json; Cargo applies this
+# to the app crate and to a runner workspace generated under this repo.
+# 16.0 matches setBadgeCount and is what `nsh package --target ios` links.
+[env]
+IPHONEOS_DEPLOYMENT_TARGET = "16.0"
